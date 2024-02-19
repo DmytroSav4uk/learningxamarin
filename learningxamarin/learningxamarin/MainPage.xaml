@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="learningxamarin.MainPage">
+
+
+    <StackLayout>
+
+        <Label Text="Register" FontSize="26"/>
+
+        <Entry x:Name="nameField" Placeholder="Name"/>
+
+        <Entry x:Name="emailField" Placeholder="Email"/>
+
+        <Entry x:Name="passField" Placeholder="Password" IsPassword="True"/>
+
+        <Label Text="agree with terms"/>
+        <CheckBox x:Name="checkField" />
+
+
+        <Button x:Name="buttonSend" Text="Send" Clicked="Button_Clicked"/>
+        <Label x:Name="errorField" Text="" TextColor="Red" FontSize="15"/>
+
+
+    </StackLayout>
+    
+    
+    
+    
+</ContentPage>
