@@ -3,28 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="learningxamarin.MainPage">
 
-
-    <StackLayout>
-
-        <Label Text="Register" FontSize="26"/>
-
-        <Entry x:Name="nameField" Placeholder="Name"/>
-
-        <Entry x:Name="emailField" Placeholder="Email"/>
-
-        <Entry x:Name="passField" Placeholder="Password" IsPassword="True"/>
-
-        <Label Text="agree with terms"/>
-        <CheckBox x:Name="checkField" />
+   
+        <StackLayout BackgroundColor="#ededed">
+            <StackLayout BackgroundColor="#194880">
+                <Label Text="Weather" HorizontalOptions="Center" Margin="0,50,0,15" FontSize="30" TextColor="#ededed" FontAttributes="Bold"/>
+                <Image Margin="0,0,0,45" Source="https://cdn-icons-png.flaticon.com/512/4052/4052984.png"/>
+            </StackLayout>
 
 
-        <Button x:Name="buttonSend" Text="Send" Clicked="Button_Clicked"/>
-        <Label x:Name="errorField" Text="" TextColor="Red" FontSize="15"/>
+            <RelativeLayout>
+                <Frame RelativeLayout.YConstraint="-40" BackgroundColor="#fcfcfc" Margin="80,0" Padding="15" CornerRadius="15">
 
+                    <StackLayout>
+                        <Entry x:Name="userInput" WidthRequest="200" Placeholder="Enter the City"/>
+                        <Button Clicked="getWeather_Clicked" x:Name="getWeather" BackgroundColor="#e6b035" Text="Send" FontAttributes="Bold"/>
+                    </StackLayout>
+
+
+                </Frame>
+            </RelativeLayout>
+        <ScrollView>
+            <Label x:Name="result" Text="" FontSize="25" HorizontalOptions="Center" TextColor="#333"/>
+        </ScrollView>
 
     </StackLayout>
-    
-    
-    
-    
+
+
+
 </ContentPage>
